@@ -9,8 +9,10 @@ export type CommitWithLocation = Commit & {
 };
 
 // Attach a row+column to each commit in a sensible way so the history can be understood.
-// NOTE: the sample implementation just puts them in a straight line
-// your task is to come up with an algorithm to produce the real solution.
+// For example, if we want the commits to render like so:
+// A-B-C
+//  ∟D-E
+// the commit matrix ([row, column]) should be: A: [0,0], B: [0,1], C: [0,2], D: [1,1], E: [1,2]
 export function addLocationsToCommits(commits: Commit[]): CommitWithLocation[] {
   return commits.map((commit, index) => ({
     ...commit,
