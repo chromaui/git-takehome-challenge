@@ -1,7 +1,7 @@
 import { Commit as CommitComponent } from "./Commit";
 import { CommitParentArcs } from "./CommitParentArcs";
 import { COMMIT_SPACING, OFFSET } from "../constants";
-import { type Commit, addLocationsToCommits } from "../addLocationstoCommits";
+import { type Commit, addLocationsToCommits } from "../addLocationsToCommits";
 
 export function GitViewer({ commits }: { commits: Commit[] }) {
   const commitsWithLocations = addLocationsToCommits(commits.slice());

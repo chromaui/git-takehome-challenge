@@ -1,11 +1,15 @@
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { GitViewer } from "./GitViewer";
 
-export default {
+const meta: Meta<typeof GitViewer> = {
   title: "GitViewer",
   component: GitViewer,
 };
 
-export const SingleCommit = {
+export default meta;
+type Story = StoryObj<typeof GitViewer>;
+
+export const SingleCommit: Story = {
   args: {
     commits: [
       {
@@ -23,7 +27,7 @@ export const SingleCommit = {
   },
 };
 
-export const SingleBranch = {
+export const SingleBranch: Story = {
   args: {
     commits: [
       {
@@ -53,7 +57,7 @@ export const SingleBranch = {
   },
 };
 
-export const TwoBranches = {
+export const TwoBranches: Story = {
   args: {
     commits: [
       {
@@ -87,10 +91,12 @@ export const TwoBranches = {
   },
 };
 
-export const Merge = {
+const twoBranchesCommits = TwoBranches.args?.commits ?? [];
+
+export const Merge: Story = {
   args: {
     commits: [
-      ...TwoBranches.args.commits,
+      ...twoBranchesCommits,
       {
         hash: "G",
         parents: ["C", "F"],
@@ -106,10 +112,10 @@ export const Merge = {
   },
 };
 
-export const ThreeBranches = {
+export const ThreeBranches: Story = {
   args: {
     commits: [
-      ...TwoBranches.args.commits,
+      ...twoBranchesCommits,
       {
         hash: "G",
         parents: ["A"],
@@ -129,10 +135,10 @@ export const ThreeBranches = {
   },
 };
 
-export const SubFeature = {
+export const SubFeature: Story = {
   args: {
     commits: [
-      ...TwoBranches.args.commits,
+      ...twoBranchesCommits,
       {
         hash: "M",
         parents: ["F"],
@@ -164,10 +170,10 @@ export const SubFeature = {
   },
 };
 
-export const MultipleFeatures = {
+export const MultipleFeatures: Story = {
   args: {
     commits: [
-      ...TwoBranches.args.commits,
+      ...twoBranchesCommits,
       {
         hash: "H",
         parents: ["B"],

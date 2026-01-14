@@ -4,7 +4,7 @@ import {
   locationToCommitCenter,
 } from "../constants";
 
-import { CommitWithLocation } from "../addLocationstoCommits";
+import { CommitWithLocation } from "../addLocationsToCommits";
 export function Commit({
   commit,
   location,
