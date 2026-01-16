@@ -9,6 +9,13 @@ yarn install
 yarn storybook
 ```
 
+#### Running Tests
+
+When running tests, you call these commands from the root.
+`yarn test` - Runs all tests (frontend + backend + storybook)
+`yarn test:frontend` - Runs only frontend tests
+`yarn test:backend` - Runs only backend tests
+
 ## Appendix/Examples
 
 ### Single commit
