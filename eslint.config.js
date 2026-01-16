@@ -1,14 +1,24 @@
 import js from '@eslint/js';
+import { defineConfig, globalIgnores } from 'eslint/config';
 import tseslint from 'typescript-eslint';
-import reactHooks from 'eslint-plugin-react-hooks';
 import storybook from 'eslint-plugin-storybook';
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import prettier from 'eslint-config-prettier/flat';
 
-export default [
+export default defineConfig([
   js.configs.recommended,
-  reactHooks.configs.flat.recommended,
   ...storybook.configs['flat/recommended'],
   ...tseslint.configs.recommended,
-  {
-    ignores: ['dist', '.eslintrc.cjs', 'eslint.config.js', '.storybook'],
-  },
-];
+  ...nextVitals,
+  prettier, // Must be last to override other configs
+  globalIgnores([
+    'dist',
+    '.eslintrc.cjs',
+    'eslint.config.js',
+    '.storybook',
+    'out/**',
+    'next-env.d.ts',
+    '.next/**',
+    'build/**',
+  ]),
+]);

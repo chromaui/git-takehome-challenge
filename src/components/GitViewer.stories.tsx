@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
-import { GitViewer } from "./GitViewer";
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { GitViewer } from './GitViewer';
 
 const meta: Meta<typeof GitViewer> = {
-  title: "GitViewer",
+  title: 'GitViewer',
   component: GitViewer,
 };
 
@@ -13,7 +13,7 @@ export const SingleCommit: Story = {
   args: {
     commits: [
       {
-        hash: "A",
+        hash: 'A',
         parents: [],
       },
     ],
@@ -21,8 +21,8 @@ export const SingleCommit: Story = {
 
   parameters: {
     design: {
-      type: "image",
-      url: "/SingleCommit.png",
+      type: 'image',
+      url: '/SingleCommit.png',
     },
   },
 };
@@ -31,28 +31,28 @@ export const SingleBranch: Story = {
   args: {
     commits: [
       {
-        hash: "A",
+        hash: 'A',
         parents: [],
       },
       {
-        hash: "B",
-        parents: ["A"],
+        hash: 'B',
+        parents: ['A'],
       },
       {
-        hash: "C",
-        parents: ["B"],
+        hash: 'C',
+        parents: ['B'],
       },
       {
-        hash: "D",
-        parents: ["C"],
+        hash: 'D',
+        parents: ['C'],
       },
     ],
   },
 
   parameters: {
     design: {
-      type: "image",
-      url: "/SingleBranch.png",
+      type: 'image',
+      url: '/SingleBranch.png',
     },
   },
 };
@@ -61,32 +61,32 @@ export const TwoBranches: Story = {
   args: {
     commits: [
       {
-        hash: "A",
+        hash: 'A',
         parents: [],
       },
       {
-        hash: "B",
-        parents: ["A"],
+        hash: 'B',
+        parents: ['A'],
       },
       {
-        hash: "C",
-        parents: ["B"],
+        hash: 'C',
+        parents: ['B'],
       },
       {
-        hash: "E",
-        parents: ["A"],
+        hash: 'E',
+        parents: ['A'],
       },
       {
-        hash: "F",
-        parents: ["E"],
+        hash: 'F',
+        parents: ['E'],
       },
     ],
   },
 
   parameters: {
     design: {
-      type: "image",
-      url: "/TwoBranches.png",
+      type: 'image',
+      url: '/TwoBranches.png',
     },
   },
 };
@@ -98,16 +98,16 @@ export const Merge: Story = {
     commits: [
       ...twoBranchesCommits,
       {
-        hash: "G",
-        parents: ["C", "F"],
+        hash: 'G',
+        parents: ['C', 'F'],
       },
     ],
   },
 
   parameters: {
     design: {
-      type: "image",
-      url: "/Merge.png",
+      type: 'image',
+      url: '/Merge.png',
     },
   },
 };
@@ -117,20 +117,20 @@ export const ThreeBranches: Story = {
     commits: [
       ...twoBranchesCommits,
       {
-        hash: "G",
-        parents: ["A"],
+        hash: 'G',
+        parents: ['A'],
       },
       {
-        hash: "H",
-        parents: ["G"],
+        hash: 'H',
+        parents: ['G'],
       },
     ],
   },
 
   parameters: {
     design: {
-      type: "image",
-      url: "/ThreeBranches.png",
+      type: 'image',
+      url: '/ThreeBranches.png',
     },
   },
 };
@@ -140,32 +140,32 @@ export const SubFeature: Story = {
     commits: [
       ...twoBranchesCommits,
       {
-        hash: "M",
-        parents: ["F"],
+        hash: 'M',
+        parents: ['F'],
       },
       {
-        hash: "H",
-        parents: ["E"],
+        hash: 'H',
+        parents: ['E'],
       },
       {
-        hash: "I",
-        parents: ["H"],
+        hash: 'I',
+        parents: ['H'],
       },
       {
-        hash: "G",
-        parents: ["M", "I"],
+        hash: 'G',
+        parents: ['M', 'I'],
       },
       {
-        hash: "L",
-        parents: ["C", "G"],
+        hash: 'L',
+        parents: ['C', 'G'],
       },
     ],
   },
 
   parameters: {
     design: {
-      type: "image",
-      url: "/SubFeature.png",
+      type: 'image',
+      url: '/SubFeature.png',
     },
   },
 };
@@ -175,37 +175,37 @@ export const MultipleFeatures: Story = {
     commits: [
       ...twoBranchesCommits,
       {
-        hash: "H",
-        parents: ["B"],
+        hash: 'H',
+        parents: ['B'],
       },
       {
-        hash: "I",
-        parents: ["H"],
+        hash: 'I',
+        parents: ['H'],
       },
       {
-        hash: "G",
-        parents: ["C", "I"],
+        hash: 'G',
+        parents: ['C', 'I'],
       },
       {
-        hash: "J",
-        parents: ["F"],
+        hash: 'J',
+        parents: ['F'],
       },
       {
-        hash: "K",
-        parents: ["J"],
+        hash: 'K',
+        parents: ['J'],
       },
 
       {
-        hash: "L",
-        parents: ["G", "K"],
+        hash: 'L',
+        parents: ['G', 'K'],
       },
     ],
   },
 
   parameters: {
     design: {
-      type: "image",
-      url: "/MultipleFeatures.png",
+      type: 'image',
+      url: '/MultipleFeatures.png',
     },
   },
 };

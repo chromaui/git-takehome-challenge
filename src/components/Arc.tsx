@@ -1,9 +1,9 @@
-import { locationToCommitCenter, STROKE_WIDTH } from "../constants";
+import { locationToCommitCenter, STROKE_WIDTH } from '../constants';
 
 export function Arc({
   fromLocation,
   toLocation,
-  color = "#0f766e",
+  color = '#0f766e',
 }: {
   fromLocation: [number, number];
   toLocation: [number, number];

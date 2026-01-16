@@ -2,9 +2,9 @@ import {
   STROKE_WIDTH,
   COMMIT_RADIUS,
   locationToCommitCenter,
-} from "../constants";
+} from '../constants';
 
-import { CommitWithLocation } from "../addLocationsToCommits";
+import { CommitWithLocation } from '../addLocationsToCommits';
 export function Commit({
   commit,
   location,

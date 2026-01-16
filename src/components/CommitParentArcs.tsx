@@ -1,5 +1,5 @@
 // Draw the arcs from a laid out commit to its parents
-import { Arc } from "./Arc";
+import { Arc } from './Arc';
 
 export function CommitParentArcs({
   location,
@@ -12,7 +12,7 @@ export function CommitParentArcs({
     <>
       {parentLocations.map((parentLocation: [number, number]) => (
         <Arc
-          key={parentLocation.join("-")}
+          key={parentLocation.join('-')}
           color="#0f766e"
           fromLocation={location}
           toLocation={parentLocation}

@@ -41,7 +41,6 @@ An example of a single feature branch
 
 ![sub feature commit](./public/SubFeature.png)
 
-
 ### Multiple Features
 
 An example of multiple feature branches
