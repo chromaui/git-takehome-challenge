@@ -1,4 +1,4 @@
-import { GitViewer } from '@/src/components/GitViewer';
+import { GitViewer } from '../src/components/GitViewer';
 
 export default function Page() {
   return (

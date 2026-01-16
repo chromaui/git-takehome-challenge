@@ -2,16 +2,15 @@
   "name": "git-challenge-template",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "next": "^16.1.2",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3"
-  },
+  "workspaces": [
+    "services/*"
+  ],
   "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev:frontend": "yarn workspace frontend dev",
+    "dev:backend": "yarn workspace backend dev",
+    "build:frontend": "yarn workspace frontend build",
+    "start:frontend": "yarn workspace frontend start",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write .",

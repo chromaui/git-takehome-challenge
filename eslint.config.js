@@ -10,15 +10,19 @@ export default defineConfig([
   ...storybook.configs['flat/recommended'],
   ...tseslint.configs.recommended,
   ...nextVitals,
+  {
+    rules: {
+      '@next/next/no-html-link-for-pages': ['error', 'services/frontend/pages'],
+    },
+  },
   prettier, // Must be last to override other configs
   globalIgnores([
-    'dist',
-    '.eslintrc.cjs',
-    'eslint.config.js',
-    '.storybook',
-    'out/**',
-    'next-env.d.ts',
-    '.next/**',
-    'build/**',
+    '**/dist/**',
+    '**/eslint.config.js',
+    '**/.storybook/**',
+    '**/out/**',
+    '**/next-env.d.ts',
+    '**/.next/**',
+    '**/build/**',
   ]),
 ]);
